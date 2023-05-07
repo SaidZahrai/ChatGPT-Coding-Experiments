@@ -1,0 +1,6 @@
+GPT4ALL
+GPT-env
+.ipynb_checkpoints
+.vscode
+**/build
+**.o
