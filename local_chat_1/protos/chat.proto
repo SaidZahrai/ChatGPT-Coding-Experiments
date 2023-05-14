@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package Chat; // This will be the namespace in your C++ code
+
+service ChatService {
+  rpc SendMessage (MessageRequest) returns (MessageResponse) {}
+}
+
+message MessageRequest {
+  string user = 1;
+  string message = 2;
+}
+
+message MessageResponse {
+  string status = 1;
+  string message = 2;
+}

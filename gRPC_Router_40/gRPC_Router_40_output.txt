@@ -1,0 +1,485 @@
+gRPC_Router_40 > pwd
+/home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40
+gRPC_Router_40 > rm -r build && cmake -Bbuild . && cmake --build build/.
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using protobuf 3.21.12.0
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE
+-- Using gRPC 1.54.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/build
+[ 10%] Generating chat.pb.cc, chat.pb.h, chat.grpc.pb.cc, chat.grpc.pb.h
+: program not found or is not executable
+Please specify a program using absolute path or make sure the program is available in your PATH system variable
+--grpc_out: protoc-gen-grpc: Plugin failed with status code 1.
+make[2]: *** [CMakeFiles/client.dir/build.make:62: chat.pb.cc] Error 1
+make[1]: *** [CMakeFiles/Makefile2:77: CMakeFiles/client.dir/all] Error 2
+make: *** [Makefile:84: all] Error 2
+gRPC_Router_40 > rm -r build && cmake -Bbuild . && cmake --build build/.
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using protobuf 3.21.12.0
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE
+-- Using gRPC 1.54.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/build
+[ 10%] Generating chat.pb.cc, chat.pb.h, chat.grpc.pb.cc, chat.grpc.pb.h
+/bin/sh: 1: grpc_out: not found
+Scanning dependencies of target client
+[ 20%] Building CXX object CMakeFiles/client.dir/src/client.cpp.o
+/home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/src/client.cpp:4:10: fatal error: chat.grpc.pb.h: No such file or directory
+    4 | #include "chat.grpc.pb.h"
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/client.dir/all] Error 2
+make: *** [Makefile:84: all] Error 2
+gRPC_Router_40 > rm -r build && cmake -Bbuild . && cmake --build build/.
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using protobuf
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE
+-- Using gRPC 1.54.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/build
+[ 10%] Generating chat.pb.cc, chat.pb.h, chat.grpc.pb.cc, chat.grpc.pb.h
+/bin/sh: 1: grpc_out: not found
+Scanning dependencies of target client
+[ 20%] Building CXX object CMakeFiles/client.dir/src/client.cpp.o
+/home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/src/client.cpp:4:10: fatal error: chat.grpc.pb.h: No such file or directory
+    4 | #include "chat.grpc.pb.h"
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/client.dir/all] Error 2
+make: *** [Makefile:84: all] Error 2
+gRPC_Router_40 > rm -r build && cmake -Bbuild . && cmake --build build/.
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Protobuf: /usr/local/lib/libprotobuf.so;-lpthread (found version "3.21.12")
+-- Using protobuf
+-- Found Threads: TRUE
+-- Using gRPC 1.54.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/build
+[ 10%] Generating chat.pb.cc, chat.pb.h, chat.grpc.pb.cc, chat.grpc.pb.h
+: program not found or is not executable
+Please specify a program using absolute path or make sure the program is available in your PATH system variable
+--grpc_out: protoc-gen-grpc: Plugin failed with status code 1.
+make[2]: *** [CMakeFiles/client.dir/build.make:62: chat.pb.cc] Error 1
+make[1]: *** [CMakeFiles/Makefile2:77: CMakeFiles/client.dir/all] Error 2
+make: *** [Makefile:84: all] Error 2
+gRPC_Router_40 > rm -r build && cmake -Bbuild . && cmake --build build/.
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Protobuf: /usr/local/lib/libprotobuf.so;-lpthread (found version "3.21.12")
+-- Using protobuf 3.21.12
+-- Found Threads: TRUE
+-- Using gRPC 1.54.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/build
+[ 10%] Generating chat.pb.cc, chat.pb.h, chat.grpc.pb.cc, chat.grpc.pb.h
+: program not found or is not executable
+Please specify a program using absolute path or make sure the program is available in your PATH system variable
+--grpc_out: protoc-gen-grpc: Plugin failed with status code 1.
+make[2]: *** [CMakeFiles/client.dir/build.make:62: chat.pb.cc] Error 1
+make[1]: *** [CMakeFiles/Makefile2:77: CMakeFiles/client.dir/all] Error 2
+make: *** [Makefile:84: all] Error 2
+gRPC_Router_40 > rm -r build && cmake -Bbuild . && cmake --build build/.
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Protobuf: /usr/local/lib/libprotobuf.so;-lpthread (found version "3.21.12")
+-- Using protobuf 3.21.12
+-- Found Threads: TRUE
+-- Using gRPC 1.54.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/build
+[ 10%] Generating chat.pb.cc, chat.pb.h, chat.grpc.pb.cc, chat.grpc.pb.h
+: program not found or is not executable
+Please specify a program using absolute path or make sure the program is available in your PATH system variable
+--grpc_out: protoc-gen-grpc: Plugin failed with status code 1.
+make[2]: *** [CMakeFiles/client.dir/build.make:62: chat.pb.cc] Error 1
+make[1]: *** [CMakeFiles/Makefile2:77: CMakeFiles/client.dir/all] Error 2
+make: *** [Makefile:84: all] Error 2
+gRPC_Router_40 > rm -r build && cmake -Bbuild . && cmake --build build/.
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using protobuf 3.21.12.0
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE
+-- Using gRPC 1.54.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/build
+[ 10%] Generating chat.pb.cc, chat.pb.h, chat.grpc.pb.cc, chat.grpc.pb.h
+/bin/sh: 1: grpc_out: not found
+Scanning dependencies of target client
+[ 20%] Building CXX object CMakeFiles/client.dir/src/client.cpp.o
+/home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/src/client.cpp:4:10: fatal error: chat.grpc.pb.h: No such file or directory
+    4 | #include "chat.grpc.pb.h"
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/client.dir/all] Error 2
+make: *** [Makefile:84: all] Error 2
+gRPC_Router_40 > rm -r build && cmake -Bbuild . && cmake --build build/.
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using protobuf 3.21.12.0
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE
+-- Using gRPC 1.54.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/build
+[ 10%] Generating chat.pb.cc, chat.pb.h, chat.grpc.pb.cc, chat.grpc.pb.h
+/bin/sh: 1: grpc_out: not found
+Scanning dependencies of target client
+[ 20%] Building CXX object CMakeFiles/client.dir/src/client.cpp.o
+/home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/src/client.cpp:4:10: fatal error: chat.grpc.pb.h: No such file or directory
+    4 | #include "chat.grpc.pb.h"
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/client.dir/all] Error 2
+make: *** [Makefile:84: all] Error 2
+gRPC_Router_40 > rm -r build && cmake -Bbuild . && cmake --build build/.
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Protobuf: /usr/local/lib/libprotobuf.so;-lpthread (found version "3.21.12")
+-- Using protobuf 3.21.12
+-- Found Threads: TRUE
+-- Using gRPC 1.54.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/build
+[ 10%] Generating chat.pb.cc, chat.pb.h, chat.grpc.pb.cc, chat.grpc.pb.h
+: program not found or is not executable
+Please specify a program using absolute path or make sure the program is available in your PATH system variable
+--grpc_out: protoc-gen-grpc: Plugin failed with status code 1.
+make[2]: *** [CMakeFiles/client.dir/build.make:62: chat.pb.cc] Error 1
+make[1]: *** [CMakeFiles/Makefile2:77: CMakeFiles/client.dir/all] Error 2
+make: *** [Makefile:84: all] Error 2
+gRPC_Router_40 > rm -r build && cmake -Bbuild . && cmake --build build/.
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using protobuf 3.21.12.0
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE
+-- Using gRPC 1.54.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/build
+[ 10%] Generating chat.pb.cc, chat.pb.h, chat.grpc.pb.cc, chat.grpc.pb.h
+/bin/sh: 1: grpc_out: not found
+Scanning dependencies of target client
+[ 20%] Building CXX object CMakeFiles/client.dir/src/client.cpp.o
+/home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/src/client.cpp:4:10: fatal error: chat.grpc.pb.h: No such file or directory
+    4 | #include "chat.grpc.pb.h"
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/client.dir/all] Error 2
+make: *** [Makefile:84: all] Error 2
+gRPC_Router_40 > rm -r build && cmake -Bbuild . && cmake --build build/.
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using protobuf 3.21.12.0
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE
+-- Using gRPC 1.54.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/build
+[ 10%] Generating chat.pb.cc, chat.pb.h, chat.grpc.pb.cc, chat.grpc.pb.h
+/bin/sh: 1: grpc_out: not found
+Scanning dependencies of target client
+[ 20%] Building CXX object CMakeFiles/client.dir/src/client.cpp.o
+/home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/src/client.cpp:4:10: fatal error: chat.grpc.pb.h: No such file or directory
+    4 | #include "chat.grpc.pb.h"
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/client.dir/all] Error 2
+make: *** [Makefile:84: all] Error 2
+gRPC_Router_40 > rm -r build && cmake -Bbuild . && cmake --build build/.
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using protobuf 3.21.12.0
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE
+-- Using gRPC 1.54.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/build
+[ 10%] Generating chat.pb.cc, chat.pb.h, chat.grpc.pb.cc, chat.grpc.pb.h
+Scanning dependencies of target client
+[ 20%] Building CXX object CMakeFiles/client.dir/src/client.cpp.o
+[ 30%] Building CXX object CMakeFiles/client.dir/chat.pb.cc.o
+[ 40%] Building CXX object CMakeFiles/client.dir/chat.grpc.pb.cc.o
+[ 50%] Linking CXX executable client
+[ 50%] Built target client
+Scanning dependencies of target server
+[ 60%] Building CXX object CMakeFiles/server.dir/src/server.cpp.o
+[ 70%] Building CXX object CMakeFiles/server.dir/chat.pb.cc.o
+[ 80%] Building CXX object CMakeFiles/server.dir/chat.grpc.pb.cc.o
+[ 90%] Linking CXX executable server
+[100%] Built target server
+gRPC_Router_40 > rm -r build && cmake -Bbuild . && cmake --build build/.
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using protobuf 3.21.12.0
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE
+-- Using gRPC 1.54.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/saidz/ChatGPT-Coding-Experiments/gRPC_Router_40/build
+[ 10%] Generating chat.pb.cc, chat.pb.h, chat.grpc.pb.cc, chat.grpc.pb.h
+Scanning dependencies of target client
+[ 20%] Building CXX object CMakeFiles/client.dir/src/client.cpp.o
+[ 30%] Building CXX object CMakeFiles/client.dir/chat.pb.cc.o
+[ 40%] Building CXX object CMakeFiles/client.dir/chat.grpc.pb.cc.o
+[ 50%] Linking CXX executable client
+[ 50%] Built target client
+Scanning dependencies of target server
+[ 60%] Building CXX object CMakeFiles/server.dir/src/server.cpp.o
+[ 70%] Building CXX object CMakeFiles/server.dir/chat.pb.cc.o
+[ 80%] Building CXX object CMakeFiles/server.dir/chat.grpc.pb.cc.o
+[ 90%] Linking CXX executable server
+[100%] Built target server
+gRPC_Router_40 > ls
+CMakeLists.txt  build  protos  src
+gRPC_Router_40 > cd build/
+build > ls
+CMakeCache.txt  Makefile         chat.grpc.pb.h  chat.pb.h  cmake_install.cmake
+CMakeFiles      chat.grpc.pb.cc  chat.pb.cc      client     server
+build > ./server
