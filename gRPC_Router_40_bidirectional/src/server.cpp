@@ -42,26 +42,17 @@ class ChatServiceImpl final : public ChatService::Service {
          return Status::OK;
       }
 
-      // Status RouteMessage(ServerContext* context, const RouteRequest* request,
-      //                RouteResponse* reply) override {
-      //    // check if receiver exists in the directory
-      //    if (users.find(request->receiver_id()) != users.end()) {
-      //       // in a real world scenario, we would also send the message to the receiver
-      //       // but for this simple example, we just acknowledge successful routing
-      //       reply->set_success(true);
-      //    } else {
-      //       reply->set_success(false);
-      //    }
-      //    return Status::OK;
-      // }
-
       Status RouteMessage(ServerContext* context, const RouteRequest* request,
                         RouteResponse* response) override {
          std::lock_guard<std::mutex> lock(mu_);
 
          int receiver_id = request->receiver_id();
-         auto it = directory_.find(receiver_id);
-         if (it == directory_.end()) {
+         std::cout << "RouteMessage tries to find receiver " << receiver_id << ".\n";
+         // auto it = directory_.find(receiver_id);       ChatGPT mixed with users
+         // if (it == directory_.end()) {                 ChatGPT mixed with users
+         auto it = users.find(receiver_id);
+         if (it == users.end()) {
+         std::cout << "RouteMessage has not found receiver " << receiver_id << ".\n";
             response->set_success(false);
          } else {
             // Add the message to the receiver's queue
@@ -77,7 +68,7 @@ class ChatServiceImpl final : public ChatService::Service {
          std::lock_guard<std::mutex> lock(mu_);
 
          int id = request->id();
-         std::cout << "Server received message from " << id << ".\n";
+         std::cout << "GetMessages received message from " << id << ".\n";
          auto it = messages_.find(id);
          if (it != messages_.end()) {
             for (const auto& message : it->second) {
@@ -93,7 +84,7 @@ class ChatServiceImpl final : public ChatService::Service {
 
    private:
       std::mutex mu_;
-      std::map<int, std::string> directory_;
+      // std::map<int, std::string> directory_;       ChatGPT mixed with users
       std::map<int, int> next_id_;
       std::map<int, std::vector<RouteRequest>> messages_;
    
