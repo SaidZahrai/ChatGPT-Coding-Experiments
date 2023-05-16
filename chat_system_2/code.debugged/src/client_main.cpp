@@ -30,12 +30,20 @@ void messageSender(ChatClient& client) {
         std::string message;
 
         if (iss >> receiver_id >> comma && comma == ',' && std::getline(iss, message)) {
-            bool success = client.SendMessage(receiver_id, message);
             std::lock_guard<std::mutex> lock(cout_mutex);
-            if (success) {
-                std::cout << "Message sent successfully." << std::endl;
+            if (receiver_id == 0) {
+                auto clients = client.ListClients(); // ChatGPT made mistate and called client.GetClients()
+                std::cout << "Registered clients: \n";
+                for (const auto& client : clients) {
+                    std::cout << "Client name: " << client.name() << ", Client ID: " << client.id() << "\n"; // GPT made mistake. Had to correct 
+                }
             } else {
-                std::cout << "Failed to send message." << std::endl;
+                bool success = client.SendMessage(receiver_id, message);
+                if (success) {
+                    std::cout << "Message sent successfully." << std::endl;
+                } else {
+                    std::cout << "Failed to send message." << std::endl;
+                }
             }
             std::cout << client.GetName() << " - ready::" << std::endl;
         }

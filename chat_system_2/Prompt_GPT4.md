@@ -154,7 +154,6 @@ I apologize for the abrupt cutoff. Here is the complete implementation:
 
 
 ```cpp
-Copy code
 #include "chat_server.h"
 
 grpc::Status ChatServer::RegisterClient(grpc::ServerContext* context, const RegisterClientRequest* request,
@@ -216,10 +215,6 @@ grpc::Status ChatServer::GetMessages(grpc::ServerContext* context, const GetMess
 
 The SendMessage function adds a new message to the queue of the receiving client. The GetMessages function retrieves all messages for a given client, removing them from the queue after they've been retrieved. It should be noted that this is a simplistic implementation and in a production system you might want to add more checks and balances, as well as handling potential multi-threading issues.
 
-
-
-
-
 **User**
 
 > Now we focus on the client code. The client should first send a registration request with a name and stop the execution 
@@ -234,7 +229,6 @@ Sure, let's start with the client class definition.
 Client class definition (chat_client.h):
 
 ```cpp
-Copy code
 #include <grpcpp/grpcpp.h>
 #include "chat.grpc.pb.h"
 
@@ -257,7 +251,6 @@ Client class implementation (chat_client.cpp):
 
 
 ```cpp
-Copy code
 #include "chat_client.h"
 
 ChatClient::ChatClient(std::shared_ptr<grpc::Channel> channel, const std::string& name)
@@ -334,7 +327,6 @@ Here is an example of a simple main server program that uses the ChatServer. Thi
 
 
 ```cpp
-Copy code
 #include <grpcpp/grpcpp.h>
 #include "chat_server.h"
 
@@ -370,7 +362,6 @@ In order to create such an application, we'll need to use C++ threading and asyn
 
 
 ```cpp
-Copy code
 #include <chrono>
 #include <thread>
 #include <future>
@@ -595,3 +586,44 @@ First, you'll need to have the following installed on your system:
       Every 30 seconds, each client will automatically check for new messages from the server and print them out.
 
 Please note: The server needs to be running before starting the clients, and all processes should be run from the same network (localhost for testing purposes). If you're going to run the server and clients on different machines, make sure to replace "localhost" with the actual IP address of the server machine in the client code.
+
+**User**
+> Can you modify the client code, so that if a message is sent to receiver with ID=0, it would request the list of clients? 
+
+**ChatGPT**
+
+Certainly, the client code can be modified to request a list of clients when a message is sent to a receiver with an ID of 0. This can be done by checking the receiver's ID before sending a message, and if the ID is 0, making a request for the list of clients instead.
+
+Here is the modified messageSender function in the client application:
+
+```cpp
+void messageSender(ChatClient& client) {
+    std::string line;
+    while (std::getline(std::cin, line)) {
+        std::istringstream iss(line);
+        int receiver_id;
+        char comma;
+        std::string message;
+
+        if (iss >> receiver_id >> comma && comma == ',' && std::getline(iss, message)) {
+            std::lock_guard<std::mutex> lock(cout_mutex);
+            if (receiver_id == 0) {
+                auto clients = client.GetClients();
+                std::cout << "Registered clients: \n";
+                for (const auto& client : clients) {
+                    std::cout << "Client name: " << client.first << ", Client ID: " << client.second << "\n";
+                }
+            } else {
+                bool success = client.SendMessage(receiver_id, message);
+                if (success) {
+                    std::cout << "Message sent successfully." << std::endl;
+                } else {
+                    std::cout << "Failed to send message." << std::endl;
+                }
+            }
+            std::cout << client.GetName() << " - ready::" << std::endl;
+        }
+    }
+}
+```
+This modified messageSender function now checks if the receiver_id is 0. If it is, it makes a request for the list of clients and prints them out. If the receiver_id is not 0, it sends the message as before.

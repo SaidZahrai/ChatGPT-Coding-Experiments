@@ -57,6 +57,14 @@ The file code.proposed/src/client_main.cpp has the following corrections:
 >         std::this_thread::sleep_for(std::chrono::seconds(3));
 22a24
 >     std::mutex cout_mutex; // ChatGPT4 forgot!
+33c35
+<                 auto clients = client.GetClients();
+---
+>                 auto clients = client.ListClients(); // ChatGPT made mistate and called client.GetClients()
+36c38
+<                     std::cout << "Client name: " << client.first << ", Client ID: " << client.second << "\n";
+---
+>                     std::cout << "Client name: " << client.name() << ", Client ID: " << client.id() << "\n"; // GPT made mistake. Had to correct
 ---------------------------------------------------
 The file code.proposed/src/server_main.cpp was fine.
 ```
