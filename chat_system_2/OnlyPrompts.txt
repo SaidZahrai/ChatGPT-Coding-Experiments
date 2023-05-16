@@ -1,0 +1,33 @@
+You are an experienced C++ software engineer with excellent knowledge from Google's protobuf and gRPC.  I want to make a simple chat system with a server and multiple clients. The server provides 4 services: 
+1) Client registration: Client requests registration with a name. In case of successful registrations, it is assigned with a unique positive integer number as ID, otherwise -1 is sent. The server has ID = 0.
+2) Listing registered clients: Clients can request a list of all connected clients and their IDs.
+3) Message routing: A client can send a message with the ID of the destination client, its own ID and a string as the message.  Server stores all messages for each client in a dedicated queue.  
+4) Transfer of all stored messages: On request from clients delivers the list of all stored messages.
+
+A message has the ID of the sender, the ID of receiver and the message string. The server receives one message only, which is request of the user lists. The receiver is the server, ID=0, and the message can be anything, even empty string.
+
+First give me the .proto file, and the code for the server class definition and implementation!
+
+--------------------
+
+Now we focus on the client code. The client should first send a registration request with a name and stop the execution 
+if regitration is not successful. After that, the client class should have interfaces for requesting the list of clients, 
+sending messages to other clients, and requesting the list of stored messages. 
+
+Please give me the class definition in a .h file and the class implementation in a .cpp file!
+
+--------------------
+
+Now, please write main programs, which uses ChatServer and implements a server process. It should start the server and prompt 'Waiting for conection...'. Every time it receives a connection or message, it should print out the type of connection or the type of the request, the name of the client and '({client ID})' and then again the prompt for waiting state. Please generate the server application code!
+
+---------------------
+
+Let's now try to make a client application, based on the ChatClient class implementation. 
+
+The client application starts with one argument, which will be the name of the client. Using that name, the client registers to the server and receives an ID. After that, two threads are started. The main thread prints out 
+the string '{name of the client} - ready::' and every 30 seconds tries to receive the stored messages from the server, 
+and takes over the standard output, when it is available, and prints them out if there are messages, and then the prompt again. The second thread wakes up with any keypress,
+and takes over the standard input/output and reads the input until a carriage return is sent. If the read line
+starts with a number, followed by ',', it is accepted as a message to the client with the ID as the given number, with whatever comes after ',' as message. Otherwise, the input is discarded. Valid messages are sent to the server as request for routing, and the success or failure of the request is printed out.
+
+Please generate the code for client application!
