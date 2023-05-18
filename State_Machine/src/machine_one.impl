@@ -1,0 +1,24 @@
+#ifndef MACHINE_ONE_IMPL_H_
+#define MACHINE_ONE_IMPL_H_
+
+#include "machine_one.h"
+
+// MachineOne template class implementation
+
+// Default constructor: initializes the base class with the name "MachineOne"
+// and adds all state classes from the template pack list
+template <typename... States>
+MachineOne<States...>::MachineOne() : MachineBase("MachineOne") {
+  AddStates<States...>();
+}
+
+// Helper function to add states to the machine
+template <typename... States>
+template <typename State, typename... Rest>
+void MachineOne<States...>::AddStates() {
+  auto state_ptr = std::make_shared<State>(this);
+  AddState(state_ptr);
+  AddStates<Rest...>();
+}
+
+#endif  // MACHINE_ONE_IMPL_H_

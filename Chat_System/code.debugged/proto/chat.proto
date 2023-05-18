@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+service ChatService {
+  rpc RegisterClient (RegisterClientRequest) returns (RegisterClientResponse) {}
+  rpc ListClients (ListClientsRequest) returns (ListClientsResponse) {}
+  rpc SendMessage (SendMessageRequest) returns (SendMessageResponse) {}
+  rpc GetMessages (GetMessagesRequest) returns (GetMessagesResponse) {}
+}
+
+message RegisterClientRequest {
+  string name = 1;
+}
+
+message RegisterClientResponse {
+  int32 id = 1;
+}
+
+message ListClientsRequest {}
+
+message ListClientsResponse {
+  repeated Client clients = 1;
+}
+
+message SendMessageRequest {
+  int32 sender_id = 1;
+  int32 receiver_id = 2;
+  string message = 3;
+}
+
+message SendMessageResponse {}
+
+message GetMessagesRequest {
+  int32 client_id = 1;
+}
+
+message GetMessagesResponse {
+  repeated Message messages = 1;
+}
+
+message Client {
+  int32 id = 1;
+  string name = 2;
+}
+
+message Message {
+  int32 sender_id = 1;
+  int32 receiver_id = 2;
+  string message = 3;
+}
